@@ -1,0 +1,65 @@
+[
+  {
+    "name": "HTML / CSS",
+    "level": "Advanced",
+    "details": [
+      "웹 표준과 웹 접근성을 준수할 수 있음.",
+      "미디어 쿼리를 활용한 반응형 웹을 개발할 수 있음.",
+      "CSS의 transition, animation으로 효과를 적용할 수 있음.",
+      "OpenGraph, Twitter Cards, Scheme.org를 비롯한 SEO를 수행할 수 있음."
+    ]
+  },
+  {
+    "name": "JavaScript",
+    "level": "Intermediate+",
+    "details": [
+      "Promise를 사용하여 비동기 처리를 할 수 있음.",
+      "Vue.js를 활용하여 사이트를 구축해본 경험 있음."
+    ]
+  },
+  {
+    "name": "Git",
+    "level": "Intermediate+",
+    "details": [
+      "Git Flow, GitHub Flow를 따라 branch를 관리할 수 있음.",
+      "Pull request(Merge request)를 활용할 수 있음."
+    ]
+  },
+  {
+    "name": "PHP",
+    "level": "Intermediate",
+    "details": [
+      "PSR을 준수할 수 있음."
+    ]
+  },
+  {
+    "name": "C / C++",
+    "level": "Intermediate",
+    "details": [
+      "STL으로 제공되는 자료 구조와 알고리즘을 적절히 사용할 수 있음."
+    ]
+  },
+  {
+    "name": "Linux",
+    "level": "Intermediate",
+    "details": [
+      "방화벽 정책 및 퍼미션 등을 설정할 수 있음.",
+      "Ubuntu와 CentOS에서 APM 기반 서비스를 운영해본 경험 있음."
+    ]
+  },
+  {
+    "name": "MySQL",
+    "level": "Intermediate",
+    "details": [
+      "다른 언어와 연계하여 DML을 사용할 수 있음.",
+      "데이터베이스를 정규화할 수 있음."
+    ]
+  },
+  {
+    "name": "Java",
+    "level": "Beginner",
+    "details": [
+      "멀티 스레드 서버를 구현할 수 있음."
+    ]
+  }
+]

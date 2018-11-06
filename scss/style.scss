@@ -1,0 +1,262 @@
+$theme-primary: #5f4b8b;
+$theme-secondary: #f0eee9;
+$theme-tertiary: #00abc0;
+
+// initialize
+
+body, main, header, footer, section, article, nav, aside, div, h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  font-family: "Noto Sans KR";
+  line-height: 180%;
+}
+
+h1 {
+  padding-bottom: 1.25rem;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: $theme-primary;
+
+  @media not all and (min-width: 1024px) {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+// pseudo
+
+::selection {
+  background-color: $theme-primary;
+  color: #fafafa;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+
+  &-track {
+    border: 1px solid #eee;
+  }
+
+  &-thumb {
+    width: 10px;
+    border-radius: 10px;
+    background-color: #bdbdbd;
+
+    &:hover {
+      background-color: #9e9e9e;
+    }
+
+    &:active {
+      background-color: $theme-primary;
+    }
+
+    &:vertical {
+      min-height: 10px;
+    }
+
+    &:horizontal {
+      min-width: 10px;
+    }
+  }
+}
+
+// sidebar
+
+$slidebar-width: 340px;
+$slidebar-padding: 2.5rem;
+
+.sidebar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  padding: $slidebar-padding;
+  background-color: $theme-primary;
+  color: $theme-secondary;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+
+  a {
+    color: $theme-secondary;
+  }
+
+  ::selection {
+    background-color: $theme-secondary;
+    color: $theme-primary;
+  }
+}
+
+// profile
+
+.profile {
+  margin-bottom: 3rem;
+
+  a:hover {
+    border-bottom-color: transparent;
+    color: $theme-tertiary;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    a {
+      border-bottom: 1px dotted;
+      transition: border 200ms cubic-bezier(0.4, 0.0, 0.2, 1),
+                  color 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+      padding-right: .5rem;
+      fill: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+// navigation
+
+.navigation {
+  text-align: center;
+
+  a {
+    padding: 0 10px;
+    background-color: transparent;
+    transition: background 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+
+    &.active {
+      background-color: $theme-tertiary;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.38);
+    }
+  }
+}
+
+// main
+
+main {
+  min-height: 100vh;
+
+  a {
+    border-bottom: 1px dotted;
+    color: $theme-primary;
+    transition: border 200ms cubic-bezier(0.4, 0.0, 0.2, 1),
+                background 200ms cubic-bezier(0.4, 0.0, 0.2, 1),
+                color 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+
+    &:hover {
+      border-bottom-color: transparent;
+      background-color: $theme-primary;
+      color: $theme-secondary;
+    }
+  }
+}
+
+section:first-child h2 {
+  margin-top: unset;
+}
+
+// list-content
+
+.list-content {
+
+  &__type {
+    font-weight: 500;
+    color: $theme-primary;
+  }
+
+  ul {
+    margin-bottom: .5rem;
+    padding-left: 1.5rem;
+
+    li::before {
+      padding-right: .8rem;
+      /* content: "\2022\25e6 \2023\2043 \2218\2219 \25aa\25ab"; */
+      content: "\2219";
+    }
+
+    ul li::before {
+      content: "\2218";
+    }
+  }
+}
+
+// table-content
+
+.table-content {
+  width: 100%;
+
+  &__date {
+    width: 100px;
+    font-weight: 500;
+    color: $theme-primary;
+  }
+
+  &__org {
+    padding-left: .5rem;
+    font-size: .8rem;
+    color: rgba(0, 0, 0, 0.38);
+  }
+
+  tr:nth-child(odd) {
+    background-color: #ede7f6;
+  }
+
+  tr td {
+    padding: .5rem 1rem;
+    border-top: 1px solid $theme-primary;
+    vertical-align: top;
+  }
+
+  tr:last-of-type td {
+    border-bottom: 1px solid $theme-primary;
+  }
+}
+
+// responsive
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+
+  .sidebar {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+    position: fixed;
+    width: calc($slidebar-width - calc($slidebar-padding * 2));
+    height: 100%;
+  }
+
+  main {
+    margin-left: $slidebar-width;
+    padding: 2.5rem;
+  }
+
+  section:last-child {
+    min-height: 90vh;
+  }
+}

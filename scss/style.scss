@@ -200,33 +200,30 @@ section:first-child h2 {
 // list-content
 
 .list-content {
+  margin-bottom: .5rem;
+  padding-left: 1rem;
+  border-left: 2px solid $theme-primary;
 
   &__type {
     font-weight: 500;
     color: $theme-primary;
   }
 
+  li::before {
+    padding-right: .5rem;
+  }
+
   ul {
-    margin-bottom: .5rem;
-    padding-left: 1rem;
-    border-left: 1.5px solid $theme-primary;
+    border-left: unset;
 
     li::before {
-      padding-right: .5rem;
-    }
-
-    ul {
-      border-left: unset;
-
-      li::before {
-        // bullet: \2022
-        // white bullet: \25e6
-        // triangular bullet: \2023
-        // hypen bullet: \2043
-        // black small square: \25aa
-        // white small square: \25ab
-        content: "\2043";
-      }
+      // bullet: \2022
+      // white bullet: \25e6
+      // triangular bullet: \2023
+      // hypen bullet: \2043
+      // black small square: \25aa
+      // white small square: \25ab
+      content: "\2043";
     }
   }
 }

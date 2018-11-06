@@ -116,8 +116,8 @@
     </section>
     <section id="projects">
       <h2 class="text-header">Projects</h2>
-      <div class="list-content">
-        <ul v-for="project in projects">
+      <div>
+        <ul class="list-content" v-for="project in projects">
           <li>
             {{ project.name }} <span v-if="project.url">(<a :href="project.url">{{ project.url }}</a>)</span>
             <ul>
@@ -133,8 +133,8 @@
     </section>
     <section id="education">
       <h2 class="text-header">Education</h2>
-      <div class="list-content">
-        <ul>
+      <div>
+        <ul class="list-content">
           <li>
             동의대학교 컴퓨터소프트웨어공학
             <ul>
@@ -148,8 +148,8 @@
     </section>
     <section id="activities">
       <h2 class="text-header">Activities</h2>
-      <div class="list-content">
-        <ul v-for="activity in activities">
+      <div>
+        <ul class="list-content" v-for="activity in activities">
           <li>
             <span class="list-content__type">{{ activity.type }} |</span> {{ activity.org }} {{ activity.name }}
             <ul>

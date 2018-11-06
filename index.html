@@ -176,10 +176,21 @@
     </section>
   </main>
 
+  <nav>
+    <button class="mdc-fab">
+      <svg class="mdc-fab__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+    </button>
+  </nav>
+
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js" integrity="sha256-3kjowa0CUPPK4W+yaGpNP1exjs8gbX2SSsToEMd06K8=" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js" integrity="sha256-6DDZX77BrYnAmK9a3N3tvNPtyTIk1q1w9iW+UBtot3Y=" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha256-U/cHDMTIHCeMcvehBv1xQ052bPSbJtbuiw4QA9cTKz0=" crossorigin="anonymous"></script>
   <script src="main.js"></script>
+  <script>
+    document.querySelector('.mdc-fab').addEventListener('click', () => {
+      window.scroll({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>

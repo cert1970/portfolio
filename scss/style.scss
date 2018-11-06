@@ -2,6 +2,11 @@ $theme-primary: #5f4b8b;
 $theme-secondary: #f0eee9;
 $theme-tertiary: #00abc0;
 
+$mdc-theme-primary: $theme-primary;
+$mdc-theme-secondary: $theme-secondary;
+
+@import "@material/fab/mixins";
+
 // initialize
 
 body, main, header, footer, section, article, nav, aside, div, h1, h2, h3, h4, h5, h6, ul {
@@ -191,14 +196,20 @@ section:first-child h2 {
     margin-bottom: .5rem;
     padding-left: 1.5rem;
 
+    // bullet: \2022
+    // white bullet: \25e6
+    // triangular bullet: \2023
+    // hypen bullet: \2043
+    // black small square: \25aa
+    // white small square: \25ab
+
     li::before {
       padding-right: .8rem;
-      /* content: "\2022\25e6 \2023\2043 \2218\2219 \25aa\25ab"; */
-      content: "\2219";
+      content: "\2022";
     }
 
     ul li::before {
-      content: "\2218";
+      content: "\25e6";
     }
   }
 }
@@ -235,6 +246,25 @@ section:first-child h2 {
   }
 }
 
+
+// fab
+
+.mdc-fab {
+  @include mdc-fab-base_;
+  @include mdc-fab-container-color(primary);
+  @include mdc-fab-icon-size(24px);
+  @include mdc-fab-ink-color(on-primary);
+  @include mdc-states(on-primary);
+
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+
+.mdc-fab__icon {
+  @include mdc-fab__icon_;
+}
+
 // responsive
 
 @media (min-width: 1024px) {
@@ -258,5 +288,9 @@ section:first-child h2 {
 
   section:last-child {
     min-height: 90vh;
+  }
+
+  .mdc-fab {
+    display: none;
   }
 }

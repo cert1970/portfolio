@@ -18,11 +18,18 @@
     ]
   },
   {
+    "name": "Python",
+    "level": "Intermediate+",
+    "details": [
+      "BeautifulSoup, Requests를 활용하여 파싱할 수 있음."
+    ]
+  },
+  {
     "name": "Git",
     "level": "Intermediate+",
     "details": [
       "Git Flow, GitHub Flow를 따라 branch를 관리할 수 있음.",
-      "Pull request(Merge request)를 활용할 수 있음."
+      "Pull request(Merge request)를 사용할 수 있음."
     ]
   },
   {
@@ -36,7 +43,7 @@
     "name": "C / C++",
     "level": "Intermediate",
     "details": [
-      "STL으로 제공되는 자료 구조와 알고리즘을 적절히 사용할 수 있음."
+      "STL에서 제공되는 자료 구조와 알고리즘을 적절히 사용할 수 있음."
     ]
   },
   {
@@ -51,7 +58,7 @@
     "name": "MySQL",
     "level": "Intermediate",
     "details": [
-      "다른 언어와 연계하여 DML을 사용할 수 있음.",
+      "다른 언어와 연계하여 SQL을 사용할 수 있음.",
       "데이터베이스를 정규화할 수 있음."
     ]
   },

@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 $theme-primary: #5f4b8b;
 $theme-secondary: #f0eee9;
 $theme-tertiary: #00abc0;
@@ -9,7 +11,7 @@ $mdc-theme-secondary: $theme-secondary;
 
 // initialize
 
-body, main, header, footer, section, article, nav, aside, div, h1, h2, h3, h4, h5, h6, ul {
+body, main, section, nav, div, h1, h2, ul, p {
   margin: 0;
 }
 
@@ -25,21 +27,6 @@ table {
 html {
   font-family: "Noto Sans KR";
   line-height: 180%;
-}
-
-h1 {
-  padding-bottom: 1.25rem;
-}
-
-h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  color: $theme-primary;
-
-  @media not all and (min-width: 1024px) {
-    margin-right: 1rem;
-    margin-left: 1rem;
-  }
 }
 
 a {
@@ -114,11 +101,11 @@ $slidebar-padding: 2.5rem;
 // profile
 
 .profile {
-  margin-bottom: 3rem;
+  width: 100%;
 
-  a:hover {
-    border-bottom-color: transparent;
-    color: $theme-tertiary;
+  &__list {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 
   &__item {
@@ -138,15 +125,24 @@ $slidebar-padding: 2.5rem;
       fill: rgba(255, 255, 255, 0.5);
     }
   }
+
+  a:hover {
+    border-bottom-color: transparent;
+    color: $theme-tertiary;
+  }
 }
 
 // navigation
 
 .navigation {
+  width: 100%;
+  padding: .5rem 0;
+  border-top: 1px solid $theme-secondary;
+  border-bottom: 1px solid $theme-secondary;
   text-align: center;
 
   a {
-    padding: 0 10px;
+    padding: .15rem 1rem;
     background-color: transparent;
     transition: background 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
 
@@ -158,12 +154,17 @@ $slidebar-padding: 2.5rem;
       background-color: rgba(0, 0, 0, 0.38);
     }
   }
+
+  li {
+    margin: 4px 0;
+  }
 }
 
 // main
 
 main {
   min-height: 100vh;
+  padding: 1rem;
 
   a {
     border-bottom: 1px dotted;
@@ -184,6 +185,18 @@ section:first-child h2 {
   margin-top: unset;
 }
 
+.text-header {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: $theme-primary;
+}
+
+.text-lead {
+  font-size: 1.5rem;
+  margin-bottom: .3em;
+}
+
 // list-content
 
 .list-content {
@@ -195,22 +208,25 @@ section:first-child h2 {
 
   ul {
     margin-bottom: .5rem;
-    padding-left: 1.5rem;
-
-    // bullet: \2022
-    // white bullet: \25e6
-    // triangular bullet: \2023
-    // hypen bullet: \2043
-    // black small square: \25aa
-    // white small square: \25ab
+    padding-left: 1rem;
+    border-left: 1.5px solid $theme-primary;
 
     li::before {
-      padding-right: .8rem;
-      content: "\2022";
+      padding-right: .5rem;
     }
 
-    ul li::before {
-      content: "\25e6";
+    ul {
+      border-left: unset;
+
+      li::before {
+        // bullet: \2022
+        // white bullet: \25e6
+        // triangular bullet: \2023
+        // hypen bullet: \2043
+        // black small square: \25aa
+        // white small square: \25ab
+        content: "\2043";
+      }
     }
   }
 }
@@ -233,7 +249,7 @@ section:first-child h2 {
   }
 
   tr:nth-child(odd) {
-    background-color: #ede7f6;
+    background-color: rgba(#ede7f6, 0.5);
   }
 
   tr td {
@@ -246,7 +262,6 @@ section:first-child h2 {
     border-bottom: 1px solid $theme-primary;
   }
 }
-
 
 // fab
 
@@ -278,7 +293,7 @@ section:first-child h2 {
     justify-content: unset;
     align-items: center;
     position: fixed;
-    width: calc($slidebar-width - calc($slidebar-padding * 2));
+    width: calc(#{$slidebar-width} - (#{$slidebar-padding} * 2));
     height: 100%;
   }
 

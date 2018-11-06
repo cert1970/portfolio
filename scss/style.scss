@@ -248,6 +248,13 @@ section:first-child h2 {
     color: rgba(0, 0, 0, 0.38);
   }
 
+  th {
+    padding: .5rem 1rem;
+    background-color: $mdc-theme-primary;
+    color: $theme-secondary;
+    text-align: left;
+  }
+
   tr:nth-child(odd) {
     background-color: rgba(#ede7f6, 0.5);
   }
@@ -256,10 +263,6 @@ section:first-child h2 {
     padding: .5rem 1rem;
     border-top: 1px solid $theme-primary;
     vertical-align: top;
-  }
-
-  tr:last-of-type td {
-    border-bottom: 1px solid $theme-primary;
   }
 }
 

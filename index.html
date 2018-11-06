@@ -94,6 +94,13 @@
     <section id="skills">
       <h2 class="text-header">Skills</h2>
       <table class="table-content">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Level</th>
+            <th scope="col">Note</th>
+          </tr>
+        </thead>
         <tbody>
           <tr v-for="skill in skills">
             <td itemprop="knowsAbout">{{ skill.name }}</td>
@@ -156,6 +163,12 @@
     <section id="awards">
       <h2 class="text-header">Awards</h2>
       <table class="table-content">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Name</th>
+          </tr>
+        </thead>
         <tbody>
           <tr v-for="award in awards">
             <td class="table-content__date">{{ award.date }}</td>
@@ -167,6 +180,12 @@
     <section id="certifications">
       <h2 class="text-header">Certifications</h2>
       <table class="table-content">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Name</th>
+          </tr>
+        </thead>
         <tbody>
           <tr v-for="certification in certifications">
             <td class="table-content__date">{{ certification.date }}</td>

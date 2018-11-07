@@ -5,7 +5,8 @@
     "details": [
       "웹 표준과 웹 접근성을 준수할 수 있음.",
       "미디어 쿼리를 활용한 반응형 웹을 개발할 수 있음.",
-      "CSS의 transition, animation으로 효과를 적용할 수 있음.",
+      "BEM 방법론을 적용하여 CSS 클래스를 관리할 수 있음.",
+      "SCSS를 활용하여 CSS 파일을 모듈화할 수 있음.",
       "OpenGraph, Twitter Cards, Scheme.org를 비롯한 SEO를 수행할 수 있음."
     ]
   },
@@ -67,6 +68,13 @@
     "level": "Beginner",
     "details": [
       "멀티 스레드 서버를 구현할 수 있음."
+    ]
+  },
+  {
+    "name": "Assembly",
+    "level": "Beginner",
+    "details": [
+      "Intel 문법으로 string.h 의 함수들을 구현한 경험 있음."
     ]
   }
 ]

@@ -44,10 +44,3 @@ new Vue({
     });
   }
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    let sections = document.querySelectorAll('section');
-    M.ScrollSpy.init(sections, {'scrollOffset': 100});
-  });
-});

@@ -55,6 +55,8 @@
 
   <!-- StyleSheet -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;subset=korean">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" integrity="sha256-HtCCUh9Hkh//8U1OwcbD8epVEUdBvuI8wj1KtqMhNkI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4=" crossorigin="anonymous">
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
@@ -81,6 +83,7 @@
       </div>
     </div>
     <ul class="navigation">
+      <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
@@ -91,9 +94,47 @@
   </nav>
 
   <main>
+    <section id="about">
+      <h2 class="section-header animated bounce">About</h2>
+      <div>
+        <div class="about" data-aos="fade-right">
+          <p class="about__headline">“‘사람’과 함께하는 소프트웨어 개발자”</p>
+          <p class="about__lead">맹목적인 탐구가 아닌 ‘사람을 위한 기술’을 추구합니다. ‘커뮤니케이션’을 중요시합니다.</p>
+          <blockquote>
+            <p>“It is the individual who is not interested in his fellow men who has the greatest difficulties in life and provides the greatest injury to others. It is from among such individuals that all human failures spring.”</p>
+            <p>— Alfred Adler, <i>Understanding Life</i>.</p>
+          </blockquote>
+          <p>
+            전공은 소프트웨어공학이지만, 배우는 기술의 목적엔 언제나 '사람'이 있음을 스스로 상기시키고는 합니다. 기술을 탐구할 뿐만 아니라 글을 쓰고, 심리상담사로도 활동하며 사람을 위한 '가치'를 생산합니다.
+          </p>
+        </div>
+        <div class="about" data-aos="fade-left">
+          <p class="about__headline">“자신만의 ‘길’을 걸어 나가는 개척자”</p>
+          <p class="about__lead">완벽 대신 ‘완성’을 추구합니다. 결과보다는 ‘과정’을 중요시합니다.</p>
+          <blockquote>
+            <p>“Life isn't about finding yourself. Life is about creating yourself.”</p>
+            <p>— George Bernad Shaw, <i>An Unsocial Socialist</i>.</p>
+          </blockquote>
+          <p>
+            '나'라는 존재는 지금 이 순간까지 걸어온 행보 그리고 선택 하나하나로 이루어져 있으며, 만들어 가는 '실존'입니다. 나를 구성하고 구성했던 모든 나를 마주하는 걸 두려워하지 않고, 자신의 모습을 되돌아보며 앞으로 나아갑니다.
+          </p>
+        </div>
+        <div class="about" data-aos="fade-right">
+          <p class="about__headline">“주도적으로 ‘지금’을 살아가는 실천가”</p>
+          <p class="about__lead">익숙함에 머물기보다 ‘도전’을 추구합니다. ‘선택’과 ‘책임’을 중요시합니다.</p>
+          <blockquote>
+            <p>“L'existence précède l'essence.”</p>
+            <p>— Jean-Paul Sartre, <i>L'existentialisme est un humanisme</i>.</p>
+          </blockquote>
+          <p>
+            도전이란 변화이며, 변화는 곧 발전입니다. 도전의 성공과 실패 여부보다 중요한 것은 바로 도전 그 자체로 얻는 '경험'입니다. 일상생활에서 마주하는 모든 경험조차 자신을 변화시킬 수 있는 계기이고, 따라서 나는 지금도 '성장'합니다.
+          </p>
+        </div>
+      </div>
+    </section>
     <section id="skills">
-      <h2>Skills</h2>
-      <table class="table-content">
+      <h2 data-aos="fade-right">Skills</h2>
+      <table class="table-content" data-aos="fade-right">
         <thead>
           <tr>
             <th scope="col">Name</th>
@@ -115,9 +156,9 @@
       </table>
     </section>
     <section id="projects">
-      <h2>Projects</h2>
+      <h2 data-aos="fade-right">Projects</h2>
       <div>
-        <ul class="list-content" v-for="project in projects">
+        <ul class="list-content" data-aos="fade-right" v-for="project in projects">
           <li>
             {{ project.name }} <span v-if="project.url">(<a :href="project.url">{{ project.url }}</a>)</span>
             <ul>
@@ -132,9 +173,9 @@
       </div>
     </section>
     <section id="education">
-      <h2>Education</h2>
+      <h2 data-aos="fade-right">Education</h2>
       <div>
-        <ul class="list-content">
+        <ul class="list-content" data-aos="fade-right">
           <li>
             동의대학교 컴퓨터소프트웨어공학
             <ul>
@@ -147,9 +188,9 @@
       </div>
     </section>
     <section id="activities">
-      <h2>Activities</h2>
+      <h2 data-aos="fade-right">Activities</h2>
       <div>
-        <ul class="list-content" v-for="activity in activities">
+        <ul class="list-content" data-aos="fade-right" v-for="activity in activities">
           <li>
             <span class="list-content__type">{{ activity.type }} |</span> {{ activity.org }} {{ activity.name }}
             <ul>
@@ -161,8 +202,8 @@
       </div>
     </section>
     <section id="awards">
-      <h2>Awards</h2>
-      <table class="table-content">
+      <h2 data-aos="fade-right">Awards</h2>
+      <table class="table-content" data-aos="fade-right">
         <thead>
           <tr>
             <th scope="col">Date</th>
@@ -178,8 +219,8 @@
       </table>
     </section>
     <section id="certifications">
-      <h2>Certifications</h2>
-      <table class="table-content">
+      <h2 data-aos="fade-right">Certifications</h2>
+      <table class="table-content" data-aos="fade-right">
         <thead>
           <tr>
             <th scope="col">Date</th>
@@ -204,8 +245,20 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha256-U/cHDMTIHCeMcvehBv1xQ052bPSbJtbuiw4QA9cTKz0=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
   <script src="main.js"></script>
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        window.scroll({ top: 0 });
+        M.ScrollSpy.init(
+          document.querySelectorAll('section'),
+          {'scrollOffset': parseFloat(window.getComputedStyle(document.querySelector('main')).getPropertyValue('padding-top'))}
+          );
+        AOS.init({offset: 100});
+      });
+    });
+
     document.querySelector('.mdc-fab').addEventListener('click', () => {
       window.scroll({ top: 0, behavior: 'smooth' });
     });

@@ -11,7 +11,31 @@ $mdc-theme-secondary: $theme-secondary;
 
 // initialize
 
-body, main, section, nav, div, h1, h2, ul, p {
+html {
+  font-family: "Noto Sans KR";
+  line-height: 180%;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+h1,
+h2,
+ul,
+p {
   margin: 0;
 }
 
@@ -24,14 +48,10 @@ table {
   border-collapse: collapse;
 }
 
-html {
-  font-family: "Noto Sans KR";
-  line-height: 180%;
-}
-
 a {
-  text-decoration: none;
   outline: none;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 // pseudo
@@ -103,6 +123,11 @@ $slidebar-padding: 2.5rem;
 .profile {
   width: 100%;
 
+  &__header {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
   &__list {
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -112,23 +137,23 @@ $slidebar-padding: 2.5rem;
     display: flex;
     align-items: center;
 
-    a {
-      border-bottom: 1px dotted;
-      transition: border 200ms cubic-bezier(0.4, 0.0, 0.2, 1),
-                  color 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
-    }
-
     svg {
       width: 1rem;
       height: 1rem;
       padding-right: .5rem;
       fill: rgba(255, 255, 255, 0.5);
     }
-  }
 
-  a:hover {
-    border-bottom-color: transparent;
-    color: $theme-tertiary;
+    a {
+      border-bottom: 1px dotted;
+      transition: border 200ms cubic-bezier(0.4, 0.0, 0.2, 1),
+                  color 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+
+      &:hover {
+        border-bottom-color: transparent;
+        color: $theme-tertiary;
+      }
+    }
   }
 }
 
@@ -140,6 +165,10 @@ $slidebar-padding: 2.5rem;
   border-top: 1px solid $theme-secondary;
   border-bottom: 1px solid $theme-secondary;
   text-align: center;
+
+  li {
+    margin: 4px 0;
+  }
 
   a {
     padding: .15rem 1rem;
@@ -154,10 +183,6 @@ $slidebar-padding: 2.5rem;
       background-color: rgba(0, 0, 0, 0.38);
     }
   }
-
-  li {
-    margin: 4px 0;
-  }
 }
 
 // main
@@ -165,6 +190,22 @@ $slidebar-padding: 2.5rem;
 main {
   min-height: 100vh;
   padding: 1rem;
+}
+
+// section
+
+section {
+
+  h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: $theme-primary;
+  }
+
+  &:first-child h2 {
+    margin-top: unset;
+  }
 
   a {
     border-bottom: 1px dotted;
@@ -179,22 +220,6 @@ main {
       color: $theme-secondary;
     }
   }
-}
-
-section:first-child h2 {
-  margin-top: unset;
-}
-
-.text-header {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: $theme-primary;
-}
-
-.text-lead {
-  font-size: 1.5rem;
-  margin-bottom: .3em;
 }
 
 // list-content

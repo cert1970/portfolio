@@ -7,9 +7,13 @@ $theme-tertiary: #00abc0;
 $mdc-theme-primary: $theme-primary;
 $mdc-theme-secondary: $theme-secondary;
 
+@import "@material/theme/color-palette";
+@import "@material/animation/functions";
 @import "@material/fab/mixins";
 
 // initialize
+
+@import "initialize";
 
 html {
   font-family: "Noto Sans KR";
@@ -18,23 +22,8 @@ html {
 
 body {
   overflow-x: hidden;
-  margin: 0;
 }
 
-article,
-aside,
-footer,
-header,
-hgroup,
-main,
-nav,
-section {
-  display: block;
-}
-
-h1,
-h2,
-ul,
 p {
   margin: 0;
 }
@@ -44,28 +33,22 @@ ul {
   list-style-type: none;
 }
 
-table {
-  border-collapse: collapse;
-}
-
-a {
-  outline: none;
-  background-color: transparent;
-  text-decoration: none;
+table ul {
+  margin: 0;
 }
 
 blockquote {
-  margin: .8rem;
+  margin: .4rem;
   padding: 0 .8rem;
-  border-left: 3px solid rgba(0, 0, 0, 0.25);
-  color: rgba(0, 0, 0, 0.38);
+  border-left: 3px solid rgba(0, 0, 0, 0.2);
+  color: mdc-theme-prop-value(text-hint-on-background);
 }
 
 // pseudo
 
 ::selection {
   background-color: $theme-primary;
-  color: #fafafa;
+  color: $material-color-grey-50;
 }
 
 ::-webkit-scrollbar {
@@ -74,17 +57,17 @@ blockquote {
   border-radius: 10px;
 
   &-track {
-    border: 1px solid #eee;
+    border: 1px solid $material-color-grey-200;
   }
 
   &-thumb {
     width: 10px;
     border-radius: 10px;
-    border: 1px solid #eee;
-    background-color: #bdbdbd;
+    border: 1px solid $material-color-grey-200;
+    background-color: $material-color-grey-400;
 
     &:hover {
-      background-color: #9e9e9e;
+      background-color: $material-color-grey-500;
     }
 
     &:active {
@@ -113,7 +96,7 @@ $sidebar-padding: 2.5rem;
   padding: $sidebar-padding;
   background-color: $theme-primary;
   color: $theme-secondary;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px 0 mdc-theme-prop-value(text-hint-on-background);
 
   a {
     color: $theme-secondary;
@@ -131,13 +114,12 @@ $sidebar-padding: 2.5rem;
   width: 100%;
 
   &__header {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-size: 1.5rem;
   }
 
   &__list {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   &__item {
@@ -148,13 +130,13 @@ $sidebar-padding: 2.5rem;
       width: 1rem;
       height: 1rem;
       padding-right: .5rem;
-      fill: rgba(255, 255, 255, 0.5);
+      fill: mdc-theme-prop-value(text-icon-on-dark);
     }
 
     a {
       border-bottom: 1px dotted;
-      transition: border 200ms cubic-bezier(0.4, 0.0, 0.2, 1),
-                  color 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+      transition: mdc-animation-standard(border, 200ms),
+                  mdc-animation-standard(color, 200ms);
 
       &:hover {
         border-bottom-color: transparent;
@@ -180,14 +162,14 @@ $sidebar-padding: 2.5rem;
   a {
     padding: .15rem 1rem;
     background-color: transparent;
-    transition: background 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: mdc-animation-standard(background, 200ms);
 
     &.active {
       background-color: $theme-tertiary;
     }
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.38);
+      background-color: mdc-theme-prop-value(text-hint-on-background);
     }
   }
 }
@@ -217,9 +199,9 @@ section {
   a {
     border-bottom: 1px dotted;
     color: $theme-primary;
-    transition: border 200ms cubic-bezier(0.4, 0.0, 0.2, 1),
-                background 200ms cubic-bezier(0.4, 0.0, 0.2, 1),
-                color 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: mdc-animation-standard(border, 200ms),
+                mdc-animation-standard(background, 200ms),
+                mdc-animation-standard(color, 200ms);
 
     &:hover {
       border-bottom-color: transparent;
@@ -240,7 +222,7 @@ section {
   }
 
   &__lead {
-    // color: $theme-primary;
+    margin-left: 1rem;
     font-weight: 500;
   }
 }
@@ -248,7 +230,6 @@ section {
 // list-content
 
 .list-content {
-  margin-bottom: .5rem;
   padding-left: 1rem;
   border-left: 2px solid $theme-primary;
 
@@ -290,7 +271,7 @@ section {
   &__org {
     padding-left: .5rem;
     font-size: .8rem;
-    color: rgba(0, 0, 0, 0.38);
+    color: mdc-theme-prop-value(text-hint-on-background);
   }
 
   th {
@@ -301,7 +282,7 @@ section {
   }
 
   tr:nth-child(odd) {
-    background-color: rgba(#ede7f6, 0.5);
+    background-color: rgba($material-color-deep-purple-50, 0.5);
   }
 
   tr td {
@@ -366,7 +347,7 @@ section {
 
       blockquote {
         border-left: unset;
-        border-right: 3px solid rgba(0, 0, 0, 0.25);
+        border-right: 3px solid rgba(0, 0, 0, 0.2);
       }
     }
   }

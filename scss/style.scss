@@ -61,7 +61,6 @@ blockquote {
   }
 
   &-thumb {
-    width: 10px;
     border-radius: 10px;
     border: 1px solid $material-color-grey-200;
     background-color: $material-color-grey-400;
@@ -281,13 +280,16 @@ section {
     text-align: left;
   }
 
-  tr:nth-child(odd) {
-    background-color: rgba($material-color-deep-purple-50, 0.5);
+  tr {
+    border-top: 1px solid $theme-primary;
+
+    &:nth-child(odd) {
+      background-color: rgba($material-color-deep-purple-50, 0.5);
+    }
   }
 
-  tr td {
+  td {
     padding: .5rem 1rem;
-    border-top: 1px solid $theme-primary;
     vertical-align: top;
   }
 }
@@ -354,5 +356,44 @@ section {
 
   .mdc-fab {
     display: none;
+  }
+}
+
+@media not all and (min-width: 1024px) {
+  main {
+    margin-bottom: 80px;
+  }
+
+  table {
+    display: flex;
+    white-space: nowrap;
+  }
+
+  thead {
+    display: flex;
+
+    tr {
+      display: flex;
+      flex-direction: column;
+    }
+
+    th {
+      display: inline-flex;
+      justify-content: flex-end;
+
+      &:last-of-type {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  tbody {
+    display: flex;
+    overflow-x: auto;
+
+    tr {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

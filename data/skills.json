@@ -4,25 +4,26 @@
     "level": "Advanced",
     "details": [
       "웹 표준과 웹 접근성을 준수할 수 있음.",
-      "미디어 쿼리를 활용한 반응형 웹을 개발할 수 있음.",
-      "BEM 방법론을 적용하여 CSS 클래스를 관리할 수 있음.",
-      "SCSS를 활용하여 CSS 파일을 모듈화할 수 있음.",
-      "OpenGraph, Twitter Cards, Scheme.org를 비롯한 SEO를 수행할 수 있음."
+      "미디어 쿼리로 반응형 웹을 개발할 수 있음.",
+      "BEM 방법론을 적용할 수 있음.",
+      "SCSS로 CSS를 모듈화할 수 있음.",
+      "OpenGraph, Twitter Cards, Scheme.org 등의 SEO를 적용할 수 있음."
     ]
   },
   {
     "name": "JavaScript",
     "level": "Intermediate+",
     "details": [
-      "Promise를 사용하여 비동기 처리를 할 수 있음.",
-      "Vue.js를 활용하여 사이트를 구축해본 경험 있음."
+      "Promise로 비동기 처리를 할 수 있음.",
+      "Vue.js를 사용할 수 있음.",
+      "npm으로 모듈 의존성을 관리할 수 있음."
     ]
   },
   {
     "name": "Python",
     "level": "Intermediate+",
     "details": [
-      "BeautifulSoup, Requests를 활용하여 파싱할 수 있음."
+      "BeautifulSoup, Requests로 파싱을 진행할 수 있음."
     ]
   },
   {
@@ -37,30 +38,39 @@
     "name": "PHP",
     "level": "Intermediate",
     "details": [
-      "PSR을 준수할 수 있음."
+      "PSR을 준수할 수 있음.",
+      "Laravel을 사용할 수 있음."
     ]
   },
   {
     "name": "C / C++",
     "level": "Intermediate",
     "details": [
-      "STL에서 제공되는 자료 구조와 알고리즘을 적절히 사용할 수 있음."
-    ]
-  },
-  {
-    "name": "Linux",
-    "level": "Intermediate",
-    "details": [
-      "방화벽 정책 및 퍼미션 등을 설정할 수 있음.",
-      "Ubuntu와 CentOS에서 APM 기반 서비스를 운영해본 경험 있음."
+      "STL을 활용할 수 있음.",
+      "모던 C++을 부분적으로 이해하고 응용할 수 있음."
     ]
   },
   {
     "name": "MySQL",
     "level": "Intermediate",
     "details": [
-      "다른 언어와 연계하여 SQL을 사용할 수 있음.",
+      "다른 언어와 연결해서 질의를 실행할 수 있음.",
       "데이터베이스를 정규화할 수 있음."
+    ]
+  },
+  {
+    "name": "Linux",
+    "level": "Intermediate",
+    "details": [
+      "방화벽 정책 및 퍼미션 등을 설정하고 서버를 구축할 수 있음.",
+      "Ubuntu와 CentOS에서 APM 기반 서비스를 운영해본 경험 있음."
+    ]
+  },
+  {
+    "name": "Docker",
+    "level": "Intermediate-",
+    "details": [
+      "Docker와 Docker Compose로 테스트 서버를 구축하고 사용할 수 있음."
     ]
   },
   {
@@ -74,7 +84,7 @@
     "name": "Assembly",
     "level": "Beginner",
     "details": [
-      "Intel 문법으로 string.h 의 함수들을 구현한 경험 있음."
+      "string.h에 함수들을 Intel 문법으로 구현할 수 있음."
     ]
   }
 ]

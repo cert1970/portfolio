@@ -9,21 +9,21 @@
     }
   },
   {
-    "title": "자신만의 ‘길’을 걸어 나가는 개척자",
-    "subtitle": "완벽 대신 ‘완성’을 추구합니다. ‘선택’과 ‘책임’을 중요시합니다.",
-    "quote": {
-      "content": "Life isn't about finding yourself. Life is about creating yourself.",
-      "author": "George Bernad Shaw",
-      "cite": "An Unsocial Socialist"
-    }
-  },
-  {
     "title": "주도적으로 ‘지금’을 살아가는 행동가",
     "subtitle": "익숙함에 머물기보다 ‘도전’을 추구합니다. 결과보다는 ‘과정’을 중요시합니다.",
     "quote": {
       "content": "L'existence précède l'essence.",
       "author": "Jean-Paul Sartre",
       "cite": "L'existentialisme est un humanisme"
+    }
+  },
+  {
+    "title": "자신만의 ‘길’을 걸어 나가는 개척자",
+    "subtitle": "완벽 대신 ‘완성’을 추구합니다. ‘선택’과 ‘책임’을 중요시합니다.",
+    "quote": {
+      "content": "Life isn't about finding yourself. Life is about creating yourself.",
+      "author": "George Bernad Shaw",
+      "cite": "An Unsocial Socialist"
     }
   }
 ]

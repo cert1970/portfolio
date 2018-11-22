@@ -63,8 +63,11 @@ a {
   background-color: transparent;
   text-decoration: none;
 
+  &:link,
+  &:visited,
+  &:hover,
   &:active,
-  &:hover {
+  &:focus {
     outline: none;
   }
 }

@@ -1,6 +1,4 @@
-# Node
 node_modules/
 
-# SCSS
 .sass-cache/
-*.css.map
+*.map

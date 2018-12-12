@@ -1,39 +1,48 @@
 <template>
   <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>open_in_new</v-icon>
-      </v-btn>
-    </v-toolbar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+    <portfolio-header></portfolio-header>
+    <v-content>test</v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import PortfolioHeader from "./components/Header";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    PortfolioHeader
   },
-  data () {
+  data() {
     return {
       //
-    }
+    };
   }
-}
+};
 </script>
+
+<style lang="stylus">
+@import '~vuetify/src/stylus/settings/_variables'
+
+$body-font-family = 'Noto Sans KR'
+$font-size-root = 18px
+$line-height-root = 1.5
+
+$material-light.background = #fff
+
+// @import '~vuetify/src/stylus/main'
+@import '~vuetify/src/stylus/app'
+@import '~vuetify/src/stylus/components/_app'
+@import '~vuetify/src/stylus/components/_content'
+
+a
+  background-color: transparent
+  text-decoration: none
+
+  &:link
+  &:visited
+  &:hover
+  &:active
+  &:focus
+    outline: none
+</style>

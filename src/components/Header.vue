@@ -30,13 +30,13 @@
   flex-direction: column
   justify-content: center
   align-items: center
-  height: 20em
+  padding: 2em 0
   background-color: var(--v-primary-base)
   font-size: 1.2rem
   color: var(--v-secondary-base)
 
   &__title
-    margin-bottom: 0.5em
+    margin-bottom: 0.8em
     font-size: 2em
 
   &__list
@@ -47,7 +47,7 @@
   &__item
     display: flex
     align-items: center
-    margin-bottom: 0.4em
+    margin-bottom: 0.6em
 
   &__icon
     width: 1em
@@ -58,8 +58,8 @@
     padding: 0 0.2em
     border-bottom: 1px dotted
     color: var(--v-secondary-base)
-    transition: border 100ms $transition.fast-out-slow-in,
-                color 100ms $transition.fast-out-slow-in
+    transition: background 150ms $transition.fast-out-slow-in,
+                border 150ms $transition.fast-out-slow-in
 
     &:hover
       border-bottom-color: transparent

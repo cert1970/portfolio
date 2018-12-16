@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuetify, { VApp, VContent } from "vuetify/lib";
 import transitions from "vuetify/lib/components/transitions";
+import { Scroll } from "vuetify/lib/directives";
 // import "vuetify/src/stylus/app.styl";
 
 // Astral Aura(19-3830), rgb(54, 49, 81), #363151
@@ -14,6 +15,9 @@ Vue.use(Vuetify, {
     VApp,
     VContent,
     transitions
+  },
+  directives: {
+    Scroll
   },
   theme: {
     primary: "#5f4b8b",

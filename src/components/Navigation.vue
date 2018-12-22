@@ -31,7 +31,7 @@ export default {
     isClicked: false,
     options: {
       duration: 250,
-      offset: 48,
+      offset: -48,
       easing: "easeInOutQuad"
     }
   }),
@@ -50,7 +50,7 @@ export default {
     findActiveIndex() {
       const targetList = this.targetList.slice().reverse();
       const index = targetList.findIndex(item => {
-        return item.offsetTop <= this.currentOffset + this.options.offset;
+        return item.offsetTop <= this.currentOffset - this.options.offset;
       });
 
       const lastIndex = targetList.length;

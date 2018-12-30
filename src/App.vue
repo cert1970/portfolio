@@ -2,23 +2,21 @@
   <v-app>
     <portfolio-header></portfolio-header>
     <portfolio-navigation></portfolio-navigation>
-    <main class="page-container">
-      <section v-for="i in 15" :key="i" :id="`section-${i}`">
-        {{ i }}
-      </section>
-    </main>
+    <portfolio-main></portfolio-main>
   </v-app>
 </template>
 
 <script>
-import PortfolioHeader from "./components/Header";
-import PortfolioNavigation from "./components/Navigation";
+import PortfolioHeader from "./components/PortfolioHeader";
+import PortfolioNavigation from "./components/PortfolioNavigation";
+import PortfolioMain from "./components/PortfolioMain";
 
 export default {
   name: "App",
   components: {
     PortfolioHeader,
-    PortfolioNavigation
+    PortfolioNavigation,
+    PortfolioMain
   }
 };
 </script>
@@ -27,7 +25,7 @@ export default {
 @import '~vuetify/src/stylus/settings/_variables'
 
 $body-font-family = 'Noto Sans KR'
-$font-size-root = 18px
+$font-size-root = 16px
 $line-height-root = 1.5
 
 $material-light.background = #fff
@@ -38,11 +36,7 @@ $material-light.background = #fff
 @import '~vuetify/src/stylus/components/_content'
 
 body
-  font-family: "Noto Sans KR"
-
-section
-  height: 100px
-  border-bottom: 1px solid gray
+  font-family: "Noto Sans KR", sans-serif
 
 a
   background-color: transparent
@@ -59,7 +53,4 @@ a
   max-width: 1280px
   width: 100%
   margin: 0 auto
-
-section:last-child
-  min-height: calc(100vh - 48px)
 </style>

@@ -1,30 +1,44 @@
 <template>
-  <main class="page-container">
+  <main class="page-container p-main">
     <portfolio-section name="skills">
       <template slot-scope="props">
         <v-data-table
-          class="elevation-1"
+          class="elevation-1 p-content__table"
           :headers="props.values.headers"
           :items="props.values.items"
           disable-initial-sort
           hide-actions
         >
-          <template slot="items" slot-scope="props">
-            <td>{{ props.item.name }}</td>
-            <td style="width: 150px">
-              <v-rating
-                v-model="props.item.level"
-                half-increments
-                length="3"
-                readonly
-                small
+          <template slot="items" slot-scope="prop">
+            <td>{{ prop.item.name }}</td>
+            <td>
+              <v-tooltip
+                bottom
+                close-delay="100"
               >
-              </v-rating>
+                <v-rating
+                  v-model="prop.item.level"
+                  half-increments
+                  length="3"
+                  readonly
+                  small
+                  slot="activator"
+                >
+                </v-rating>
+                <span>
+                  {{ props.values.headers[1].levels[Math.floor(prop.item.level) - 1].description }}
+                </span>
+              </v-tooltip>
             </td>
             <td>
-              <ul v-for="(detail, index) in props.item.details" :key="index">
+              <ul v-for="(detail, index) in prop.item.details" :key="index">
                 <li>{{ detail }}</li>
               </ul>
+            </td>
+          </template>
+          <template slot="footer">
+            <td class="text--disabled text-xs-right" :colspan="props.values.headers.length">
+              * default: ORDER BY level DESC, name ASC
             </td>
           </template>
         </v-data-table>
@@ -97,7 +111,7 @@
     <portfolio-section name="awards">
       <template slot-scope="props">
         <v-data-table
-          class="elevation-1"
+          class="elevation-1 p-content__table"
           :headers="props.values.headers"
           :items="props.values.items"
           disable-initial-sort
@@ -116,7 +130,7 @@
     <portfolio-section name="certifications">
       <template slot-scope="props">
         <v-data-table
-          class="elevation-1"
+          class="elevation-1 p-content__table"
           :headers="props.values.headers"
           :items="props.values.items"
           disable-initial-sort

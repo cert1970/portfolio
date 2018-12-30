@@ -2,7 +2,8 @@
   "headers": [
     {
       "text": "Date",
-      "value": "date"
+      "value": "date",
+      "width": "140px"
     },
     {
       "text": "Name",
@@ -11,7 +12,8 @@
     {
       "text": "Organization",
       "value": "org",
-      "sortable": false
+      "sortable": false,
+      "width": "200px"
     }
   ],
   "items" : [

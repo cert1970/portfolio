@@ -2,11 +2,11 @@
   <nav class="page-navigation" v-scroll="onScroll">
     <div class="page-container">
       <v-tabs
-        dark
-        v-model="activeIndex"
+        centered
         color="transparent"
-        _fixed-tabs
+        dark
         show-arrows
+        v-model="activeIndex"
       >
         <v-tabs-slider color="#fff"></v-tabs-slider>
         <v-tab
@@ -14,7 +14,7 @@
           :key="index"
           @click="onClick"
         >
-          {{ item.target }}
+          {{ _.startCase(item.target) }}
         </v-tab>
       </v-tabs>
     </div>
@@ -35,8 +35,20 @@ export default {
       easing: "easeInOutQuad"
     }
   }),
-  mounted() {
-    setTimeout(() => {
+  created() {
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.updateNavigation();
+      }, 100);
+
+      setTimeout(() => {
+        this.targetList = [];
+        this.updateNavigation();
+      }, 1000);
+    });
+  },
+  methods: {
+    updateNavigation() {
       [].forEach.call(document.querySelectorAll("section"), item => {
         this.targetList.push({
           target: item.id,
@@ -44,9 +56,7 @@ export default {
         });
         console.log(item.id, item.offsetTop);
       });
-    }, 200);
-  },
-  methods: {
+    },
     findActiveIndex() {
       const targetList = this.targetList.slice().reverse();
       const index = targetList.findIndex(item => {
@@ -79,7 +89,7 @@ export default {
 
       this.$vuetify.goTo.call(
         this,
-        `#${e.target.innerText.toLowerCase()}`,
+        `#${this._.kebabCase(e.target.innerText)}`,
         this.options
       );
     }
@@ -95,4 +105,7 @@ export default {
   top: 0
   z-index: 10
   background-color: var(--v-primary-base)
+  font-family: Roboto, sans-serif
+  letter-spacing: 1px
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12)
 </style>

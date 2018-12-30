@@ -33,11 +33,12 @@
   padding: 2em 0
   background-color: var(--v-primary-base)
   font-size: 1.2rem
+  font-family: Roboto, sans-serif
   color: var(--v-secondary-base)
 
   &__title
-    margin-bottom: 0.8em
-    font-size: 2em
+    margin-bottom: 1.2rem
+    font-size: 2.2em
 
   &__list
     display: flex

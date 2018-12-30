@@ -144,30 +144,10 @@ export default {
 </script>
 
 <style lang="stylus">
-main
+.p-main
   padding: 0 1rem
 
-section:last-child
-  min-height: calc(100vh - 48px)
-</style>
-
-<style lang="stylus" scoped>
-table
-  thead
-    th
-      font-size: 14px
-  tbody
-    td
-      font-size: 1rem
-
-table.v-table
-  thead
-    th
-      font-size: 2rem
-
 ul
-  margin: 0
-  padding: 0
+  padding: 0 !important
   list-style-type: none
-  // border-bottom 1px solid
 </style>

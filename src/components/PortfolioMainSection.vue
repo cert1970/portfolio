@@ -1,6 +1,6 @@
 <template>
-  <section :id="id">
-    <h2 class="headline">{{ title }}</h2>
+  <section :id="id" class="p-content">
+    <h2 class="p-content__title">{{ title }}</h2>
     <slot :values="values"></slot>
   </section>
 </template>
@@ -36,7 +36,23 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
-h2
-  margin: 2rem 0 1rem
+<style lang="stylus">
+.p-content
+  &__title
+    margin: 2rem 0 1rem
+    color: var(--v-primary-base)
+    font-weight: 700
+    font-size: 1.8rem
+    font-family: Roboto
+
+  &:last-child
+    min-height: calc(100vh - 48px)
+
+  & &__table
+    tbody
+      tr
+        td
+          padding-top: 0.5rem
+          padding-bottom: 0.5rem
+          font-size: 1rem
 </style>

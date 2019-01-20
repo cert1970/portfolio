@@ -35,26 +35,26 @@ export default {
       easing: "easeInOutQuad"
     }
   }),
-  created() {
+  mounted() {
     this.$nextTick(() => {
       setTimeout(() => {
         this.updateNavigation();
       }, 100);
 
       setTimeout(() => {
-        this.targetList = [];
         this.updateNavigation();
       }, 1000);
     });
   },
   methods: {
     updateNavigation() {
+      this.targetList = [];
       [].forEach.call(document.querySelectorAll("section"), item => {
         this.targetList.push({
           target: item.id,
           offsetTop: item.offsetTop
         });
-        console.log(item.id, item.offsetTop);
+        // console.log(item.id, item.offsetTop);
       });
     },
     findActiveIndex() {
